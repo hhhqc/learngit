@@ -8,7 +8,7 @@ class Player(object):
         self.agile = agile
         self.experience = experience
         self.level = level
-
+        self.attack = self.strength
     # 名字
     @property
     def name(self):
@@ -37,7 +37,7 @@ class Player(object):
 
     @attack.setter
     def attack(self, value):
-        self._attack = 10 + self.strength * 2
+        self._attack = 10 + value * 2
 
     # 最大攻击
     @property

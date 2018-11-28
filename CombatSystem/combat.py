@@ -23,6 +23,9 @@ class Combat():
         while True:
             #判断速度待做
 
+            if():
+                return
+
             print("1.普通攻击 2.选择技能 3.使用道具 4.逃跑")
             instruction = input("请输入指令:")
             if instruction == '1' :
