@@ -70,7 +70,7 @@ class Player(object):
         return self._strength
     @strength.setter
     def strength(self, value):
-        self._strength = value
+        self._strength = self._strength + value
 
     # 敏捷
     @property
@@ -78,7 +78,7 @@ class Player(object):
         return self._agile
     @agile.setter
     def agile(self, value):
-        self._agile = value
+        self._agile = self._agile + value
 
     # 智力
     @property
