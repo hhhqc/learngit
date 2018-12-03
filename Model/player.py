@@ -1,20 +1,20 @@
-
+import configparser
 
 class Player(object):
-    def __init__(self, name, blood,attack,mana,strength, agile,intelligence,physique,criticalChance,skillInjuryRate,defenses, experience, level):
-        self.name = name
-        self.blood = blood
-        self.mana = mana
-        self.attack = attack
-        self.strength = strength
-        self.agile = agile
-        self.intelligence = intelligence
-        self.physique = physique
-        self.criticalChance = criticalChance
-        self.skillInjuryRate = skillInjuryRate
-        self.defenses = defenses
-        self.experience = experience
-        self.level = level
+    def __init__(self,strength, agile,intelligence,physique, name, blood,mana,attack,speed,criticalChance,defenses, experience, level):
+        self._strength = strength
+        self._agile = agile
+        self._intelligence = intelligence
+        self._physique = physique
+        self._name = name
+        self._blood = blood
+        self._mana = mana
+        self._attack = attack
+        self._speed = speed
+        self._criticalChance = criticalChance
+        self._defenses = defenses
+        self._experience = experience
+        self._level = level
 
     # 名字
     @property
@@ -33,19 +33,14 @@ class Player(object):
     def blood(self):
         return self._blood
     @blood.setter
-    def blood(self):
-        self._blood = 100 + self.physique * 5
     @blood.setter
     def blood(self, value):
-        self._blood = 100 + self.physique * 5 + value
+        self._blood = 100 + self._physique * 5 + value
 
     # 法力=100+智力*5+装备法力
     @property
     def mana(self):
         return self._mana
-    @mana.setter
-    def mana(self):
-        self._mana = 100 +  self._intelligence * 5
     @mana.setter
     def mana(self,value):
         self._mana = 100 + self._intelligence * 5 + value
@@ -72,9 +67,13 @@ class Player(object):
     @property
     def strength(self):
         return self._strength
+
     @strength.setter
     def strength(self, value):
-        self._strength = self._strength + value
+        if self._strength == None:
+            self._strength = value
+        else:
+            self._strength = self._strength + value
 
     # 敏捷=敏捷+装备敏捷
     @property
@@ -82,7 +81,10 @@ class Player(object):
         return self._agile
     @agile.setter
     def agile(self, value):
-        self._agile = self._agile + value
+        if self._agile == None:
+            self._agile = value
+        else:
+            self._agile = self._agile + value
 
     # 智力=智力+装备智力
     @property
@@ -90,7 +92,10 @@ class Player(object):
         return self._intelligence
     @intelligence.setter
     def intelligence(self,value):
-        self._intelligence = self._intelligence + value
+        if self._intelligence == None:
+            self._intelligence = value
+        else:
+            self._intelligence = self._intelligence + value
 
     #体质=体质+装备体质
     @property
@@ -98,7 +103,10 @@ class Player(object):
         return self._physique
     @physique.setter
     def physique(self,value):
-        self._physique = self._physique + value
+        if self._physique == None:
+            self._physique = value
+        else:
+            self._physique = self._physique + value
 
     #暴击率=(10+敏捷*0.3)
     @property

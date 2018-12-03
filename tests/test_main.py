@@ -1,6 +1,7 @@
 from CombatSystem.combat import Combat
 from Model.player import Player
-from Model.npc import NPC
+from Model.monster import Monster
+from Model.LoadConfig import LoadConfig
 from config import *
 import os
 import configparser
@@ -14,23 +15,13 @@ def main():
     # npcs = [npc]
     # combatSystem = Combat
     # combatSystem.Combat(players, npcs)
-    conf = configparser.ConfigParser()
-    conf.read(r"..\config\player.config")
-    print(conf.getint('player', 'player_level'))
-    player = Player(conf.get('player', 'player_name'),
-                    conf.getfloat('player', 'player_blood'),
-                    conf.getfloat('player', 'player_mana'),
-                    conf.getfloat('player', 'player_attack'),
-                    conf.getint('player', 'player_strength'),
-                    conf.getint('player', 'player_agile'),
-                    conf.getint('player', 'player_intelligence'),
-                    conf.getint('player', 'player_physique'),
-                    conf.getfloat('player', 'player_criticalChance'),
-                    conf.getfloat('player', 'player_skillInjuryRate'),
-                    conf.getfloat('player', 'player_defenses'),
-                    conf.getfloat('player', 'player_experience'),
-                    conf.getint('player', 'player_level'))
-
+    player = LoadConfig.LoadConfigPlayer('player')
+    print(player.blood)
+    players = [player]
+    monster = LoadConfig.LoadConfigMonster('monster_lv1')
+    monsters = [monster]
+    # combatSystem = Combat
+    # combatSystem.Combat(players, monsters)
 
 
 if __name__ == "__main__":
