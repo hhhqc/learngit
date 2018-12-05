@@ -1,7 +1,7 @@
 
 class Monster(object):
     def __init__(self, name, blood, attack, speed, criticalChance,
-                 skillInjuryRate, defenses, level):
+                 skillInjuryRate, defenses, level, exe):
         self._name = name
         self._blood = blood
         self._attack = attack
@@ -10,6 +10,7 @@ class Monster(object):
         self._skillInjuryRate = skillInjuryRate
         self._defenses = defenses
         self._level = level
+        self._exe = exe
 
         # 名字
 
@@ -27,7 +28,7 @@ class Monster(object):
 
     @blood.setter
     def blood(self, value):
-        self._blood = value
+        self._blood = self._blood + value
 
     @property
     def attack(self):
@@ -35,7 +36,7 @@ class Monster(object):
 
     @attack.setter
     def attack(self, value):
-        self._attack =  value
+        self._attack = value
 
     # 最大攻击=攻击*1.1
     @property
@@ -52,7 +53,7 @@ class Monster(object):
         return self._criticalChance
 
     @criticalChance.setter
-    def criticalChance(self,value):
+    def criticalChance(self, value):
         self._criticalChance = value
 
     @criticalChance.setter
@@ -77,12 +78,15 @@ class Monster(object):
 
     @speed.setter
     def speed(self, value):
-        self._speed =  value
+        self._speed = value
 
     # 等级
     @property
     def level(self):
         return self._level
-    @level.setter
-    def level(self, value):
-        self._level = value
+
+    # 经验
+
+    @property
+    def exe(self):
+        return self._exe

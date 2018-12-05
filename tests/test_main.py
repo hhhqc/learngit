@@ -3,25 +3,35 @@ from Model.player import Player
 from Model.monster import Monster
 from Model.LoadConfig import LoadConfig
 from config import *
+import random
 import os
 import configparser
 
 
 def main():
-    # print("战斗开始")
-    # player = Player('player',100,20,10,0,1) # 名字,血量,力量,敏捷,经验,等级
-    # players = [player]
-    # npc = NPC('npc',100,10,10,0,1)
-    # npcs = [npc]
-    # combatSystem = Combat
-    # combatSystem.Combat(players, npcs)
+
     player = LoadConfig.LoadConfigPlayer('player')
-    print(player.blood)
-    players = [player]
-    monster = LoadConfig.LoadConfigMonster('monster_lv1')
-    monsters = [monster]
-    # combatSystem = Combat
-    # combatSystem.Combat(players, monsters)
+    while(True):
+        chance = random.randint(1, 10)
+        if(chance > 9):
+            monster = LoadConfig.LoadConfigMonster('monster_lv2')
+        else:
+            monster = LoadConfig.LoadConfigMonster('monster_lv1')
+        print(player.name + '遭遇' + monster.name)
+        print('开始战斗')
+        combatSystem = Combat
+        combatSystem.Combat(player, monster)
+        if(player.blood <= 0):
+            break
+        if(monster.blood<=0):
+            player.experience = monster.exe
+        print(player.experience)
+        print(player.level)
+        print('-------------------------------')
+        print('1.继续战斗 2.退出战斗')
+        type = input('请输入指令:')
+        if(type == '2'):
+            break
 
 
 if __name__ == "__main__":
