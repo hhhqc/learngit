@@ -40,3 +40,15 @@ class LoadConfig():
                           conf.getint(monster, 'monster_level'),
                           conf.getint(monster, 'monster_exe'))
         return monster
+
+    def LoadConfigbackpack(backpack):
+        conf = configparser.ConfigParser()
+        conf.read(r"..\config\backpack.config")
+        for i in range(1,6):
+            BackpackBar = 'BackpackBar_'+str(i)
+            backpack.append(conf.get(BackpackBar,'equip'))
+        return backpack
+
+    def LoadConfigEquip(equip):
+        conf = configparser.ConfigParser()
+        conf.read(r"..\config\euqip.config")
