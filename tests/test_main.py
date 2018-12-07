@@ -36,6 +36,18 @@ def main():
     backpack = Backpack.openBackpack(backpack)
     print(backpack)
 
+    equipids = ['equip_1','equip_2','equip_3','equip_4','equip_5']
+    equips = LoadConfig.LoadConfigEquip(equipids)
+    print(equips)
+    for equip in equips:
+        print(equip.id)
+
+    backpack = Backpack.delBackpack(backpack,'1')
+    print(backpack)
+
+
+
+
 
 if __name__ == "__main__":
     main()

@@ -1,7 +1,7 @@
 import configparser
 from Model.player import Player
 from Model.monster import Monster
-
+from Model.Equip import Equip
 
 class LoadConfig():
     def LoadConfigPlayer(player):
@@ -25,6 +25,7 @@ class LoadConfig():
         player.blood = 0
         player.mana = 0
         player.speed = 0
+        player.defenses = 0
         return player
 
     def LoadConfigMonster(monster):
@@ -46,9 +47,30 @@ class LoadConfig():
         conf.read(r"..\config\backpack.config")
         for i in range(1,6):
             BackpackBar = 'BackpackBar_'+str(i)
-            backpack.append(conf.get(BackpackBar,'equip'))
+            equipid = conf.get(BackpackBar, 'equipid')
+            if(equipid!=''):
+                backpack.append(equipid)
+            else:
+                backpack.append('')
+
         return backpack
 
-    def LoadConfigEquip(equip):
+    def LoadConfigEquip(equipids):
         conf = configparser.ConfigParser()
-        conf.read(r"..\config\euqip.config")
+        conf.read(r"..\config\equip.config")
+        equips = []
+        for equipid in equipids:
+            equip = Equip(conf.get(equipid,'equip_id'),
+                          conf.get(equipid,'equip_name'),
+                          conf.getint(equipid, 'equip_level'),
+                          conf.getfloat(equipid, 'equip_attack'),
+                          conf.getint(equipid, 'equip_strength'),
+                          conf.getint(equipid, 'equip_agile'),
+                          conf.getint(equipid, 'equip_intelligence'),
+                          conf.getint(equipid, 'equip_physique'),
+                          conf.getfloat(equipid, 'equip_speed'),
+                          conf.getint(equipid, 'equip_blood'),
+                          conf.getint(equipid, 'equip_mana'),
+                          conf.getint(equipid, 'equip_defenses'))
+            equips.append(equip)
+        return equips

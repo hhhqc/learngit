@@ -5,11 +5,9 @@ class Backpack():
         return backpack
 
     def appendBackpack(backpack,equip):
-        backpack = LoadConfig.LoadConfigbackpack(backpack)
         backpack.append(equip)
         return backpack
 
     def delBackpack(backpack,equip):
-        backpack = LoadConfig.LoadConfigbackpack(backpack)
         backpack.remove(equip)
         return backpack

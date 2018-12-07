@@ -47,7 +47,7 @@ class Player(object):
     # 血量=100+体质*5+装备血量
     @property
     def blood(self):
-        return self._blood + self._physique * 5
+        return self._blood + self.physique * 5
 
     @blood.setter
     def blood(self, value):
@@ -55,12 +55,12 @@ class Player(object):
 
     @property
     def hpMax(self):
-        return self._hpMax + self._physique * 5
+        return self._hpMax + self.physique * 5
 
     # 法力=100+智力*5+装备法力
     @property
     def mana(self):
-        return self._mana + self._intelligence * 5
+        return self._mana + self.intelligence * 5
 
     @mana.setter
     def mana(self, value):
@@ -68,12 +68,12 @@ class Player(object):
 
     @property
     def mpMax(self):
-        return self._mpMax + self._intelligence * 5
+        return self._mpMax + self.intelligence * 5
 
     # 攻击=10+力量*2
     @property
     def attack(self):
-        return self._attack + self._strength * 2
+        return self._attack + self.strength * 2
 
     @attack.setter
     def attack(self, value):
@@ -82,12 +82,12 @@ class Player(object):
     # 最大攻击=攻击*1.1
     @property
     def attackMax(self):
-        return self._attack * 1.1
+        return self.attack * 1.1
 
     # 最小攻击=攻击*0.9
     @property
     def attackMin(self):
-        return self._attack * 0.9
+        return self.attack * 0.9
 
     # 力量=力量+装备力量
     @property
