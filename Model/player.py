@@ -198,12 +198,16 @@ class Player(object):
             property = input('请输入指令:')
             if(property=='1'):
                 self.strength = 1
+                print('当前力量:'+str(self.strength))
             elif(property=='2'):
                 self.intelligence = 1
+                print('当前智力:' + str(self.intelligence))
             elif(property=='3'):
                 self.agile = 1
+                print('当前敏捷:' + str(self.agile))
             elif(property=='4'):
                 self.physique = 1
+                print('当前体质:' + str(self.physique))
             else:
                 print('输入错误请重新输入')
                 i -= 1
