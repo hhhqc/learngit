@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3a4ef94b-c886-4cec-91d7-b6d8be14cd31" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backpack/backpack.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backpack/backpack.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Equip.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Equip.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/LoadConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/LoadConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/equip.config" beforeDir="false" afterPath="$PROJECT_DIR$/config/equip.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/xixi$test_main.coverage" NAME="test_main Coverage Results" MODIFIED="1544434781310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/xixi$test_main.coverage" NAME="test_main Coverage Results" MODIFIED="1544438230472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/xixi$main.coverage" NAME="main Coverage Results" MODIFIED="1542960610530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -56,7 +53,7 @@
         <counts>
           <entry key="config" value="477" />
           <entry key="dummy" value="12" />
-          <entry key="py" value="7856" />
+          <entry key="py" value="7911" />
           <entry key="schedule" value="277" />
           <entry key="txt" value="108" />
         </counts>
@@ -64,7 +61,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="874" />
-          <entry key="Python" value="7856" />
+          <entry key="Python" value="7911" />
         </counts>
       </usages-collector>
     </session>
@@ -74,23 +71,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/test_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            <state relative-caret-position="362">
+              <caret line="46" column="54" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="54" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1544434252298" expanded="true" signature="261:267" ph="..." />
+                <marker date="1544438227611" expanded="true" signature="261:267" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-595">
+            <state relative-caret-position="-1054">
               <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
@@ -99,10 +96,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/Equip.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+            <state relative-caret-position="447">
+              <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
               <folding>
-                <marker date="1544434780387" expanded="true" signature="14:15" ph="..." />
+                <marker date="1544437445426" expanded="true" signature="14:15" ph="..." />
               </folding>
             </state>
           </provider>
@@ -198,8 +195,8 @@
         <option value="$PROJECT_DIR$/Model/LoadConfig.py" />
         <option value="$PROJECT_DIR$/config/equip.config" />
         <option value="$PROJECT_DIR$/Backpack/backpack.py" />
-        <option value="$PROJECT_DIR$/tests/test_main.py" />
         <option value="$PROJECT_DIR$/Model/Equip.py" />
+        <option value="$PROJECT_DIR$/tests/test_main.py" />
       </list>
     </option>
   </component>
@@ -418,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544175032557</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="完成:&#10;背包系统和装备系统&#10;未完成:&#10;地图">
+      <created>1544437401440</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1544437401440</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -589,17 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1544434252298" expanded="true" signature="261:267" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/equip.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -607,20 +600,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Model/player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1054">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Model/Equip.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+        <state relative-caret-position="447">
+          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
           <folding>
-            <marker date="1544434780387" expanded="true" signature="14:15" ph="..." />
+            <marker date="1544437445426" expanded="true" signature="14:15" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/player.py">
+    <entry file="file://$PROJECT_DIR$/tests/test_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="362">
+          <caret line="46" column="54" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1544438227611" expanded="true" signature="261:267" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
