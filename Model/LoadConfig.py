@@ -57,7 +57,7 @@ class LoadConfig():
 
     def LoadConfigEquip(equipids):
         conf = configparser.ConfigParser()
-        conf.read(r"..\config\equip.config")
+        conf.read(r"..\config\equip.config",encoding="utf-8-sig")
         equips = []
         for equipid in equipids:
             equip = Equip(conf.get(equipid,'equip_id'),

@@ -1,6 +1,7 @@
 from Model.LoadConfig import LoadConfig
 class Backpack():
-    def openBackpack(backpack):
+    def openBackpack(self):
+        backpack = []
         backpack = LoadConfig.LoadConfigbackpack(backpack)
         return backpack
 

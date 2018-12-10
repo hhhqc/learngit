@@ -61,3 +61,26 @@ class Equip():
     def defenses(self):
         return self._defenses
 
+
+    def printequip(self):
+        print('装备名字:'+self.name)
+        print('装备ID:'+str(self.id))
+        print('装备等级:' + str(self.level))
+        if(self.attack!='0'):
+            print('装备攻击:' + str(self.attack))
+        if(self.strength!='0'):
+            print('装备力量:' + str(self.strength))
+        if (self.agile != '0'):
+            print('装备敏捷:' + str(self.agile))
+        if (self.intelligence != '0'):
+            print('装备智力:' + str(self.intelligence))
+        if (self.physique != '0'):
+            print('装备体质:' + str(self.physique))
+        if (self.speed != '0'):
+            print('装备速度:' + str(self.speed))
+        if (self.blood != '0'):
+            print('装备血量:' + str(self.blood))
+        if (self.mana != '0'):
+            print('装备蓝量:' + str(self.mana))
+        if (self.defenses != '0'):
+            print('装备防御:' + str(self.defenses))

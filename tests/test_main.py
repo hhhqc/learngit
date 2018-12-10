@@ -28,23 +28,36 @@ def main():
     #     print(player.experience)
     #     print(player.level)
     #     print('-------------------------------')
-    #     print('1.继续战斗 2.退出战斗')
+    #     print('1.继续战斗 2.打开背包 5.退出战斗')
     #     type = input('请输入指令:')
-    #     if(type == '2'):
+    #     if(type == '5'):
     #         break
-    backpack = []
-    backpack = Backpack.openBackpack(backpack)
-    print(backpack)
+    #     elif(type=='2'):
 
-    equipids = ['equip_1','equip_2','equip_3','equip_4','equip_5']
+    equipids = []
+    backpack = Backpack.openBackpack(1)
+    print(backpack)
+    for equipid in backpack:
+        equipids.append('equip_'+equipid)
+
+    print(equipids)
     equips = LoadConfig.LoadConfigEquip(equipids)
     print(equips)
     for equip in equips:
-        print(equip.id)
+
+        print('装备ID:'+equip.id+' 装备名字:'+equip.name)
+
+    getequipid = input('请输入要查看装备的ID:')
+    getequipid = ['equip_'+str(getequipid)]
+    equip = LoadConfig.LoadConfigEquip(getequipid)
+
+    print(equip[0].printequip())
 
     backpack = Backpack.delBackpack(backpack,'1')
     print(backpack)
 
+    backpack = Backpack.openBackpack(1)
+    print(backpack)
 
 
 
