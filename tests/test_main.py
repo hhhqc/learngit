@@ -2,6 +2,7 @@ from CombatSystem.combat import Combat
 from Model.player import Player
 from Model.monster import Monster
 from Model.LoadConfig import LoadConfig
+from Model.Equip import Equip
 from config import *
 import random
 import os
@@ -25,6 +26,14 @@ def main():
             break
         if(monster.blood<=0):
             player.experience = monster.exe
+        equipid = Equip.getEquipid(1)
+        equipid = 'equip_' +str(equipid)
+        equip = LoadConfig.LoadConfigEquip(equipid)
+        print('物品掉落:')
+        if(equip.id!=0):
+            print(equip.name+":"+equip.quality)
+        else:
+            print('无')
         print(player.experience)
         print(player.level)
         while(True):
@@ -37,15 +46,16 @@ def main():
                 equipids = []
                 backpack = Backpack.openBackpack(1)
                 for equipid in backpack:
-                    equipids.append('equip_' + equipid)
-                equips = LoadConfig.LoadConfigEquip(equipids)
+                    if equipid!='':
+                        equipids.append('equip_' + equipid)
+                equips = LoadConfig.LoadConfigEquips(equipids)
                 for equip in equips:
                     print('装备ID:' + equip.id + ' 装备名字:' + equip.name)
 
                 getequipid = input('请输入要查看装备的ID:')
                 getequipid = ['equip_' + str(getequipid)]
                 equip = LoadConfig.LoadConfigEquip(getequipid)
-                equip[0].printequip()
+                equip.printequip()
             elif(type=='1'):
                 break
 

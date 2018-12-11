@@ -1,8 +1,9 @@
+import random
 class Equip():
-    def __init__(self,id,name,level,attack,strength,agile,intelligence,physique,speed,blood,mana,defenses):
+    def __init__(self,id,name,quality,attack,strength,agile,intelligence,physique,speed,blood,mana,defenses):
         self._id = id
         self._name = name
-        self._level = level
+        self._quality = quality
         self._attack = attack
         self._strength = strength
         self._agile = agile
@@ -22,8 +23,8 @@ class Equip():
         return self._name
 
     @property
-    def level(self):
-        return self._level
+    def quality(self):
+        return self._quality
 
     @property
     def attack(self):
@@ -65,7 +66,7 @@ class Equip():
     def printequip(self):
         print('装备名字:'+self.name)
         print('装备ID:'+str(self.id))
-        print('装备等级:' + str(self.level))
+        print('装备等级:' + str(self.quality))
         if(self.attack!=0):
             print('装备攻击:' + str(self.attack))
         if(self.strength!=0):
@@ -84,3 +85,23 @@ class Equip():
             print('装备蓝量:' + str(self.mana))
         if (self.defenses != 0):
             print('装备防御:' + str(self.defenses))
+
+    def getEquipid(mapid):
+        chance = random.randint(1,100)
+        if(chance==1):
+            equipid = random.randint(mapid * 25 - 4, mapid * 25-0)
+            return equipid
+        elif(2<=chance<=4):
+            equipid = random.randint(mapid * 25 - 9, mapid * 25 -5)
+            return equipid
+        elif(5<=chance<=9):
+            equipid = random.randint(mapid * 25 - 14, mapid * 25-10)
+            return equipid
+        elif(10<=chance<=19):
+            equipid = random.randint(mapid * 25 - 19, mapid * 25-15)
+            return equipid
+        elif(20<=chance<+34):
+            equipid = random.randint(mapid * 25 - 24, mapid * 25-20)
+            return equipid
+        else:
+            return ''
